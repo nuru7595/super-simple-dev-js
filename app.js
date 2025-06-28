@@ -21,7 +21,7 @@ const clickShow = (btn, place, code) => {
     }
 };
 
-// Page 1;
+// Page 1: Lesson 1;
 click("a1", () => {
     alert("Good Morning !!");
 });
@@ -38,7 +38,7 @@ click("e1", () => {
     console.log(2 + 2 - 5);
 });
 
-// Page 2;
+// Page 2: Lesson 1;
 click("f1", () => {
     document.body.innerHTML = "Good Morning !!";
 });
@@ -55,4 +55,37 @@ click("j1", () => {
     document.body.innerHTML = "";
 });
 
-// Page 3;
+// Page 3: Lesson 2;
+const a2 = 10 + 8 * 3 + 5;
+show("a2", a2);
+show("b2", a2 / 3);
+
+const c2 = 1850 + 750 * 2;
+show("c2", c2 / 100);
+show("d2", (c2 * 0.1) / 100);
+show("e2", (c2 * 0.2) / 100);
+
+// Page 4: Lesson 2;
+const f2 = 2095 + 799 + 1899;
+show("f2", f2 / 100);
+
+const g2 = 2095 + 799 + 1899 + 599;
+show("g2", g2 / 100);
+show("h2", Math.round(g2 * 0.1) / 100);
+show("i2", Math.round(g2 + g2 * 0.1) / 100);
+
+// Page 5: Lesson 2;
+show("j2", Math.floor(2.8));
+show("k2", Math.ceil(2.2));
+
+const cConvert = (c) => {
+    return (c * 9) / 5 + 32;
+};
+const fConvert = (f) => {
+    return ((f - 32) * 5) / 9;
+};
+show("l2", cConvert(25));
+show("m2", fConvert(86));
+show("n2", cConvert(-5));
+
+// Page 6: Lesson 3;
