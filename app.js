@@ -1,8 +1,8 @@
 const id = (id) => document.getElementById(id);
-const show = (place, code) => {
+const show = (place, msg) => {
     const element = id(place);
-    if (element && code) {
-        element.innerHTML = code;
+    if (element && msg) {
+        element.innerHTML = String(msg);
     }
 };
 const click = (btn, code) => {
@@ -11,12 +11,12 @@ const click = (btn, code) => {
         element.addEventListener("click", code);
     }
 };
-const clickShow = (btn, place, code) => {
+const clickShow = (btn, place, msg) => {
     const btnEl = id(btn);
     const placeEl = id(place);
-    if (btnEl && placeEl && code) {
+    if (btnEl && placeEl && msg) {
         btnEl.addEventListener("click", () => {
-            placeEl.innerHTML = code;
+            placeEl.innerHTML = msg;
         });
     }
 };
@@ -89,3 +89,37 @@ show("m2", fConvert(86));
 show("n2", cConvert(-5));
 
 // Page 6: Lesson 3;
+const a3 = "My name is:";
+show("a3", a3);
+const b3 = "Nuru";
+show("b3", b3);
+show("c3", a3 + " " + b3);
+const d3 = 5 + 3;
+show("d3", "Total cost: $" + d3);
+show("e3", `Total cost: $${d3}`);
+click("f3", () => {
+    alert(`Total cost: $${d3}`);
+});
+
+// Page 7: Lesson 3;
+const g3 = (599 + 295) / 100;
+show("g3", "Total cost: $" + g3);
+show("h3", `Total cost: $${g3}`);
+click("i3", () => {
+    alert(`Total cost: $${g3}`);
+});
+click("j3", () => {
+    alert(`Total cost: $${g3}\nThank you, come again!`);
+});
+
+// Page 8: Lesson 3;
+const k3 = 2095 * 2 + 799 * 2;
+show("k3", `Items (${1 + 1 + 1 + 1}): $${k3 / 100}`);
+const l3 = 499 + 499;
+show("l3", `Shipping & handling: $${l3 / 100}`);
+const m3 = k3 + l3;
+show("m3", `Total before tax: ${m3 / 100}`);
+const n3 = Math.round(m3 * 0.1);
+show("n3", `Estimated tax (10%): $${n3 / 100}`);
+
+// Page 9: Lesson 4;
