@@ -1,58 +1,58 @@
 const id = (id) => document.getElementById(id);
 const show = (place, msg) => {
-    const element = id(place);
-    if (element && msg) {
-        element.innerHTML = String(msg);
-    }
+  const element = id(place);
+  if (element && msg) {
+    element.innerHTML = String(msg);
+  }
 };
 const click = (btn, code) => {
-    const element = id(btn);
-    if (element && code) {
-        element.addEventListener("click", code);
-    }
+  const element = id(btn);
+  if (element && code) {
+    element.addEventListener("click", code);
+  }
 };
 const clickShow = (btn, place, msg) => {
-    const btnEl = id(btn);
-    const placeEl = id(place);
-    if (btnEl && placeEl && msg) {
-        btnEl.addEventListener("click", () => {
-            placeEl.innerHTML = msg;
-        });
-    }
+  const btnEl = id(btn);
+  const placeEl = id(place);
+  if (btnEl && placeEl && msg) {
+    btnEl.addEventListener("click", () => {
+      placeEl.innerHTML = msg;
+    });
+  }
 };
 
 // Page 1: Lesson 1;
 click("a1", () => {
-    alert("Good Morning !!");
+  alert("Good Morning !!");
 });
 click("b1", () => {
-    alert("Nuru");
+  alert("Nuru");
 });
 click("c1", () => {
-    console.log(10 + 5);
+  console.log(10 + 5);
 });
 click("d1", () => {
-    console.log(20 - 5);
+  console.log(20 - 5);
 });
 click("e1", () => {
-    console.log(2 + 2 - 5);
+  console.log(2 + 2 - 5);
 });
 
 // Page 2: Lesson 1;
 click("f1", () => {
-    document.body.innerHTML = "Good Morning !!";
+  document.body.innerHTML = "Good Morning !!";
 });
 click("g1", () => {
-    document.body.innerHTML = "Nuru";
+  document.body.innerHTML = "Nuru";
 });
 click("h1", () => {
-    alert(10 + 8 + 20);
+  alert(10 + 8 + 20);
 });
 click("i1", () => {
-    alert(100 - 20 - 50 + 200);
+  alert(100 - 20 - 50 + 200);
 });
 click("j1", () => {
-    document.body.innerHTML = "";
+  document.body.innerHTML = "";
 });
 
 // Page 3: Lesson 2;
@@ -79,10 +79,10 @@ show("j2", Math.floor(2.8));
 show("k2", Math.ceil(2.2));
 
 const cConvert = (c) => {
-    return (c * 9) / 5 + 32;
+  return (c * 9) / 5 + 32;
 };
 const fConvert = (f) => {
-    return ((f - 32) * 5) / 9;
+  return ((f - 32) * 5) / 9;
 };
 show("l2", cConvert(25));
 show("m2", fConvert(86));
@@ -98,7 +98,7 @@ const d3 = 5 + 3;
 show("d3", "Total cost: $" + d3);
 show("e3", `Total cost: $${d3}`);
 click("f3", () => {
-    alert(`Total cost: $${d3}`);
+  alert(`Total cost: $${d3}`);
 });
 
 // Page 7: Lesson 3;
@@ -106,10 +106,10 @@ const g3 = (599 + 295) / 100;
 show("g3", "Total cost: $" + g3);
 show("h3", `Total cost: $${g3}`);
 click("i3", () => {
-    alert(`Total cost: $${g3}`);
+  alert(`Total cost: $${g3}`);
 });
 click("j3", () => {
-    alert(`Total cost: $${g3}\nThank you, come again!`);
+  alert(`Total cost: $${g3}\nThank you, come again!`);
 });
 
 // Page 8: Lesson 3;
@@ -123,3 +123,10 @@ const n3 = Math.round(m3 * 0.1);
 show("n3", `Estimated tax (10%): $${n3 / 100}`);
 
 // Page 9: Lesson 4;
+// Page 10: Lesson 4;
+click("h4", () => {
+  console.log("Welcome !!");
+});
+
+// Page 11: Lesson 4;
+// Page 12: Lesson 5;
